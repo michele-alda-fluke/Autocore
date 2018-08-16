@@ -1,76 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{124A6CE5-1EA3-4E97-B145-1DDC241CD0BC}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Autocore.Test</RootNamespace>
-    <AssemblyName>Autocore.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProductVersion>12.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ReleaseVersion>1.3.1</ReleaseVersion>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="Moq" Version="4.9.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Autocore\Autocore.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Integration\GenericInterface.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VolatileContextTest.cs" />
-    <Compile Include="TestBase.cs" />
-    <Compile Include="ContainerTest.cs" />
-    <Compile Include="VolatileContainerTest.cs" />
-    <Compile Include="ImplicitVolatileScopeTest.cs" />
-    <Compile Include="VolatileTest.cs" />
-    <Compile Include="FactoryTest.cs" />
-    <Compile Include="IntegrationTest.cs" />
-    <Compile Include="IntegrationBase.cs" />
-    <Compile Include="Integration\InstanceTest.cs" />
-    <Compile Include="Integration\SingletonTest.cs" />
-    <Compile Include="Integration\GenericSingletonTest.cs" />
-    <Compile Include="Integration\VolatileTest.cs" />
-    <Compile Include="Integration\AsyncTest.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Autocore\Autocore.csproj">
-      <Project>{6C2E8ECC-A9C1-4A2E-8D4E-6EA1F71B1126}</Project>
-      <Name>Autocore</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
+
+
 </Project>

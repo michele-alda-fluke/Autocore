@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{35F92E5C-6539-4FA7-AFDA-0BAA892BCFAC}"
 EndProject
@@ -89,6 +89,9 @@ Global
 		{BEF0CB5F-547B-4C0C-9B03-A630A20A9BD7} = {35F92E5C-6539-4FA7-AFDA-0BAA892BCFAC}
 		{FF9471DF-DC82-4E19-8657-CD7EE0E17E3C} = {35F92E5C-6539-4FA7-AFDA-0BAA892BCFAC}
 		{CC1602C8-4A6F-4814-8C4A-59F8EE9E3E5C} = {35F92E5C-6539-4FA7-AFDA-0BAA892BCFAC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F6E7ED8-A8D0-4BB6-984A-6DD19858D3C1}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Autocore\Autocore.csproj

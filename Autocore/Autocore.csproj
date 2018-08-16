@@ -1,73 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6C2E8ECC-A9C1-4A2E-8D4E-6EA1F71B1126}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Autocore</RootNamespace>
-    <AssemblyName>Autocore</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProductVersion>12.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\Autocore.snk</AssemblyOriginatorKeyFile>
-    <ReleaseVersion>1.3.1</ReleaseVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <GenerateDocumentation>true</GenerateDocumentation>
-    <DelaySign>true</DelaySign>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <GenerateDocumentation>true</GenerateDocumentation>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Autofac" Version="4.8.1" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Implementation\ContainerBase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Factory.cs" />
-    <Compile Include="Externsions.cs" />
-    <Compile Include="Volatile.cs" />
-    <Compile Include="Implementation\Container.cs" />
-    <Compile Include="IContainer.cs" />
-    <Compile Include="Implementation\ImplicitContext.cs" />
-    <Compile Include="Implementation\VolatileContainer.cs" />
-    <Compile Include="Implementation\VolatileContext.cs" />
-    <Compile Include="IDependency.cs" />
-    <Compile Include="Implementation\Factory.cs" />
-    <Compile Include="Implementation\ImplicitVolatileScope.cs" />
-    <Compile Include="Implementation\ContainerBuilderExtensions.cs" />
-    <Compile Include="Interfaces\IContainerBase.cs" />
-    <Compile Include="Interfaces\IImplicitContext.cs" />
-    <Compile Include="Interfaces\IVolatileContainer.cs" />
-    <Compile Include="Interfaces\IVolatileContext.cs" />
-    <Compile Include="Exceptions\VolatileResolutionException.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+
 </Project>
